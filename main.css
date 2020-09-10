@@ -6,6 +6,19 @@
     list-style: none;
     box-sizing: border-box;
 }
+.navbar{
+  padding-top: 0;
+  padding-left: 190px;
+}
+.container-fluid{
+  padding-left: 10px;
+  box-shadow: 0px 0px 10px 0px #7D7D90;
+}
+.navbar-brand{
+  font-size: 12px;
+  font-weight: 300;
+}
+
 .navbar-nav > li{
     padding-left:10px;
     padding-right:10px;
@@ -17,11 +30,24 @@ li, a{
     text-decoration: none;
     display: inline;
 }
-.my-button {
-  widows: 5 25px;;
-  padding:5px;
+#signin{
+  border: 2px solid rgb(247, 249, 250);
+  color: aqua;
   display: inline;
-  font-family: "Montserrat", sans-serif;
+  padding-top:inherit;
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 0.3rem 1rem!important;
+
+
+}
+#signup{
+  background-color: deepskyblue;
+  border: 2px solid rgb(246, 248, 248);
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 0.5rem 1rem!important;
+  line-height: 4px;
 }
 .notification {
     color: black;
@@ -41,17 +67,45 @@ li, a{
     background: red;
     color: white;
   }
-  .side-nav-bar-layout {
-    position: relative;
-    top:-10%;
+  .side-bar {
+    position: inherit;
+    top: -200px;
     width: 187px;
     height: 100vh;
     z-index: 2;
     float: left;
-    background:url('./image.jpg');
-    background-position: center;
+    background:url('./image.jpg');  
+    /* background-position: top; */
+    opacity: 0.6;
     background-size: cover;
-  
   }
 
- 
+  .vertical-bar {
+    position: relative;
+    top: 150px;
+    color: black;
+  }
+
+  .dash-container {
+    position:inherit;
+    height: 85vh;
+    width: 85vw;
+    top: -5px;
+    left: 300px;
+    
+}
+.dash-container h1 {
+  position: relative;
+  font-size: 20px;
+  left:8%;
+}
+.form-group{
+  box-sizing: border-box;
+}
+.card{
+  left:8%;
+  float: left;
+  margin: 5px;
+  box-shadow: 1px 0px 1px 0px #7D7D90
+}
+
