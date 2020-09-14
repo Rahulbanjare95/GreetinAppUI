@@ -7,12 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <!-- JS, Popper.js, and jQuery -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
-
-
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
     <script src="../app.js"></script>
 </head>
 
@@ -134,15 +129,14 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/442c9bd4eb.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
-    $(document).ready(function(){
+    $(document).ready(function() {
         readRecords();
     });
 
     function readRecords() {
         var readRecord = "readRecord";
         $.ajax({
-
-            url: "backend.php",
+            url: "http://localhost/GreetingTask/GreetingTask/GreetingAppPHP/config/config.php",
             type: 'POST',
             data: {
                 readRecord: readRecord
@@ -158,7 +152,7 @@
         var firstname = $('#firstname').val();
 
         $.ajax({
-            url: "backend.php",
+            url: "http://localhost/GreetingTask/GreetingTask/GreetingAppPHP/config/config.php",
             type: 'POST',
             data: {
                 firstname: firstname
@@ -174,7 +168,7 @@
     function deleteRecords() {
         var deleteid = $('#deleteid').val();
         $.ajax({
-            url: "backend.php",
+            url: "http://localhost/GreetingTask/GreetingTask/GreetingAppPHP/config/config.php",
             type: 'POST',
             data: {
                 deleteid: deleteid
@@ -190,30 +184,14 @@
     function editRecord() {
         var updateid = $('#updateid').val();
         var updatefirstname = $('#updatefirstname').val();
-        
-        $.post("backend.php", {
-            updateid:updateid,
-            updatefirstname:updatefirstname
-        },
-        function(data, status){
-            readRecords();
-        }
+        $.post("http://localhost/GreetingTask/GreetingTask/GreetingAppPHP/config/config.php", {
+                updateid: updateid,
+                updatefirstname: updatefirstname
+            },
+            function(data, status) {
+                readRecords();
+            }
         );
-        
-        
-        // $.ajax({
-        //     url: "backend.php",
-        //     type: 'POST',
-        //     data: {
-        //         updateid: updateid,
-        //         updatefirstname: updatefirstname
-        //     },
-        //     success: function(data, status) {
-        //         console.log(status);
-        //         readRecords();
-        //     }
-
-        // });
     }
 </script>
 
